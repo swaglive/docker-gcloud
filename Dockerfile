@@ -23,6 +23,7 @@ FROM        ${base}
 
 ENV         PATH="/google-cloud-sdk/bin:$PATH"
 
+ENTRYPOINT  ["gcloud"]
 WORKDIR     /google-cloud-sdk
 
 COPY        --from=build /google-cloud-sdk/bin /google-cloud-sdk/bin
